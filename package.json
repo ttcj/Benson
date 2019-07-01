@@ -1,0 +1,35 @@
+{
+  "name": "benson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon server/server.js & webpack-dev-server --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttcj/Benson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttcj/Benson/issues"
+  },
+  "homepage": "https://github.com/ttcj/Benson#readme",
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
