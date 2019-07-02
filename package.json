@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "npx kill-port 3000 && jest --watch",
     "dev": "parcel public/index.html"
   },
   "repository": {
