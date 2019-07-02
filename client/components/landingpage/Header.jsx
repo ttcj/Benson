@@ -5,6 +5,7 @@ import SigninForm from '../forms/SigninForm';
 import SignupForm from '../forms/SignupForm';
 import {userSignup,userSignin} from '../../actions/creators/userActions';
 import ConfirmationModal from '../ConfirmationModal';
+import styled from "styled-components";
 const customStyles = {
     content : {
       top                   : '50%',
@@ -52,8 +53,7 @@ class Header extends Component{
     render(){
         // console.log("these are the props", this.props)
         return(
-            <div >
-                
+            <HeaderDiv>
                 <button className='sign_button' onClick={e=>{
                     this.setActiveModal('signin')
                     this.openModal();
@@ -86,10 +86,16 @@ class Header extends Component{
                     </div>
                 )}
 
-            </div>
+            </HeaderDiv>
+                
+
+         
         )
     }
 }
 
-
+const HeaderDiv = styled.div`
+    grid-row: 1;
+    grid-column:1/5;
+`;
 export default connect(mapStateToProps,mapDispatchToProps)(Header);

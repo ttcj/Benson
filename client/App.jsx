@@ -7,8 +7,7 @@ class App extends Component {
     super();
   }
 
-  render() {
-    
+  render() { 
     return <LandingContainer />
   }
 }
