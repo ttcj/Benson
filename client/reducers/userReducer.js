@@ -1,22 +1,30 @@
-import { SIGNIN_USER, SIGNUP_USER } from '../actions/actionTypes';
+import { SIGNIN_USER, SIGNUP_USER, CONFIRM_USER } from '../actions/actionTypes'
 
 const initalState = {
   currentUser: {},
+  isConfirmed: false,
   houseHold: [],
-  bills: [],
-};
+  bills: []
+}
 
-export default function(state = initalState, action) {
+export default function (state = initalState, action) {
   switch (action.type) {
     case SIGNIN_USER:
-    return{
-      ...state
-    }
+      return {
+        ...state,
+        currentUser: action.payload
+      }
     case SIGNUP_USER:
-      return{
-        ...state
+      return {
+        ...state,
+        currentUser: action.payload
+      }
+    case CONFIRM_USER:
+      return {
+        ...state,
+        isConfirmed: action.payload
       }
     default:
-      return state;
+      return state
   }
 }
