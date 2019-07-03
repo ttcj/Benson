@@ -5,14 +5,14 @@ import Header from '../components/landingpage/Header';
 
 export default function LandingContainer() {
   return (
-    <LandingDiv className="landingDiv">
-      <Header/>
-    </LandingDiv>
-  );
+    <AppWrapper>
+      <Header className='landingDiv' />
+    </AppWrapper>
+  )
 }
 
-const LandingDiv = styled.div`
-display: grid;
+const AppWrapper = styled.div`
+  display: grid;
 grid-template-columns: repeat(5,1fr);
 grid-template-rows: 1fr 1fr 1fr 1fr;
 grid-template-area: 

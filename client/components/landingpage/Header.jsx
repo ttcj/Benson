@@ -28,7 +28,7 @@ const mapDispatchToProps = dispatch =>({
     userSignin: event => dispatch(userSignin(event))
 })
   
-Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root')
 
 class Header extends Component{
     constructor(props){
