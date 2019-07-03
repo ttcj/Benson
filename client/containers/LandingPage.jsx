@@ -5,7 +5,7 @@ import Header from '../components/landingpage/Header';
 
 export default function LandingContainer() {
   return (
-    <LandingDiv>
+    <LandingDiv className="landingDiv">
       <Header/>
     </LandingDiv>
   );
