@@ -2,22 +2,6 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-/* ******************** DB Connection ******************** */
-
-// Connection URL
-const url = 'mongodb://heroku_4n2clldv:j3e80jsh2tes5b7r970bejgtq4@ds245927.mlab.com:45927/heroku_4n2clldv';
-
-// Connection options
-const options = {
-  keepAlive: 1,
-  connectTimeoutMS: 30000,
-  reconnectTries: 30,
-  reconnectInterval: 5000,
-  useNewUrlParser: true,
-};
-
-mongoose.connect(url, options);
-
 /* ******************** Schema Definitions ******************** */
 const userSchema = new Schema({
   username: String,
