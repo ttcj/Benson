@@ -5,12 +5,6 @@ const newHousehold () => {
   
 }
 
-const addUser () => {
-
-}
-
-const 
-
-exports = module.exports {
-  
-}
+exports = module.exports = {
+  newHousehold
+};

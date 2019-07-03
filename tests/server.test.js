@@ -32,7 +32,7 @@ describe('Signup', () => {
   //   name: 'Lucille',
   //   phoneNumber: 1555444333
   // }
-  // const validSignupData = 'name=%C3%89tienne&phone=1234567890'
+  const validSignupData = 'name=%C3%89tienne&phone=1234567890&household=roommates'
   const invalidPhoneData = 'name=%C3%89tienne&phone=012345678'
   const missingSignupData = 'phone=0123456789'
 
@@ -46,6 +46,14 @@ describe('Signup', () => {
   })
 
   it('should respond with an error if a field in the form data is missing', async () => {
+    const response = await request(app)
+      .post('/')
+      .send(missingSignupData)
+      .expect(400)
+      .expect('Content-Type', 'text/plain')
+      .expect('missing name')
+  })
+  it('should respond with 200 if valid sign-up data is received', async () => {
     const response = await request(app)
       .post('/')
       .send(missingSignupData)
