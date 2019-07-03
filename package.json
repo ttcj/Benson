@@ -5,7 +5,10 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "npx kill-port 3000 && jest --watch",
-    "dev": "parcel public/index.html"
+    "dev": "parcel public/index.html",
+    "test": "echo \'Error: no test specified\' && exit 1",
+    "dev": "NODE_ENV=development nodemon server/server.js & webpack-dev-server --open --hot",
+    "dev-test": "webpack-dev-server --open --hot"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,19 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "@babel/polyfill": "^7.4.4",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-modal": "^3.8.2",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.2.4",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
