@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+const { Schema } = mongoose;
 
 /* ******************** DB Connection ******************** */
 
 // Connection URL
-const url = `mongodb://heroku_4n2clldv:j3e80jsh2tes5b7r970bejgtq4@ds245927.mlab.com:45927/heroku_4n2clldv`;
+const url = 'mongodb://heroku_4n2clldv:j3e80jsh2tes5b7r970bejgtq4@ds245927.mlab.com:45927/heroku_4n2clldv';
 
-//Connection options
+// Connection options
 const options = {
-  keepAlive: 1, 
-  connectTimeoutMS: 30000, 
-  reconnectTries: 30, 
+  keepAlive: 1,
+  connectTimeoutMS: 30000,
+  reconnectTries: 30,
   reconnectInterval: 5000,
-  useNewUrlParser: true
+  useNewUrlParser: true,
 };
 
 mongoose.connect(url, options);
@@ -25,19 +26,19 @@ const userSchema = new Schema({
   },
   household_id: {
     type: Schema.ObjectId,
-    ref: 'Household'
-  }
+    ref: 'Household',
+  },
 });
 
 const householdSchema = new Schema({
   users: [{
     type: Schema.ObjectId,
-    ref: 'User'
+    ref: 'User',
   }],
   name: String,
   lists: {
-    bills: { type: Schema.Types.Mixed }
-  }
+    bills: { type: Schema.Types.Mixed },
+  },
 });
 
 /* ******************** Model Definitions ******************** */
@@ -47,13 +48,5 @@ const User = mongoose.model('User', userSchema);
 /* ******************** Model Export ******************** */
 module.exports = {
   Household,
-  User
-}
-
-
-
-
-
-
-
-
+  User,
+};
