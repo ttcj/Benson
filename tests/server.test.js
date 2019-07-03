@@ -48,7 +48,7 @@ describe('Signup', () => {
   it('should respond with an error if a field in the form data is missing', async () => {
     const response = await request(app)
       .post('/')
-      .send(missingSignupData)
+      .send(validSignupData)
       .expect(400)
       .expect('Content-Type', 'text/plain')
       .expect('missing name')
@@ -56,8 +56,8 @@ describe('Signup', () => {
   it('should respond with 200 if valid sign-up data is received', async () => {
     const response = await request(app)
       .post('/')
-      .send(missingSignupData)
-      .expect(400)
+      .send(validSignupData)
+      .expect(200)
       .expect('Content-Type', 'text/plain')
       .expect('missing name')
   })
