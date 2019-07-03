@@ -1,4 +1,4 @@
-const app = require('../server.js')
+const { app, db } = require('../server.js')
 
 const userController = {}
 
