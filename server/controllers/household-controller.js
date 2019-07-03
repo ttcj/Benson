@@ -1,10 +1,9 @@
-const { Household, User } = require('../db-models/db-models');
+// const { Household, User } = require('../db-models/db-models');
 
+// const newHousehold = () => {
 
-const newHousehold () => {
-  
-}
+// }
 
-exports = module.exports = {
-  newHousehold
-};
+// exports = module.exports = {
+//   newHousehold
+// }
