@@ -8,6 +8,6 @@ export const userSignin = user => async dispatch => {
   dispatch({ type: SIGNIN_USER, payload: user })
 }
 
-export const confirmUser = confirmationCode => async dispacth => {
-  dispatch({ type: CONFIRM_USER, payload: confirmationCode })
+export const confirmUser = confirmationCode => async dispatch => {
+  dispatch({ type: CONFIRM_USER, payload: true })
 }
