@@ -21,9 +21,7 @@ mongoose.connect(url, options);
 const userSchema = new Schema({
   username: String,
   phone_number: {
-    type: Number,
-    min: 10,
-    max: 10
+    type: Numb
   },
   household_id: {
     type: Schema.ObjectId,
@@ -47,7 +45,7 @@ const Household = mongoose.model('Household', householdSchema);
 const User = mongoose.model('User', userSchema);
 
 /* ******************** Model Export ******************** */
-exports = module.exports = {
+module.exports = {
   Household,
   User
 }
