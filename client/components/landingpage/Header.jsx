@@ -53,25 +53,28 @@ class Header extends Component {
   }
   render () {
     return (
-      <HeaderDiv>
-        <button
-          className='sign_button'
-          onClick={e => {
-            this.setActiveModal('signin')
-            this.openModal()
-          }}
-        >
-          Signin
-        </button>
-        <button
-          className='sign_button'
-          onClick={e => {
-            this.setActiveModal('signup')
-            this.openModal()
-          }}
-        >
-          Signup
-        </button>
+      <HeaderWrapper>
+        <h1>BENSON</h1>
+        <span>
+          <button
+            className='sign_button'
+            onClick={e => {
+              this.setActiveModal('signin')
+              this.openModal()
+            }}
+          >
+            Signin
+          </button>
+          <button
+            className='sign_button'
+            onClick={e => {
+              this.setActiveModal('signup')
+              this.openModal()
+            }}
+          >
+            Signup
+          </button>
+        </span>
 
         {this.state.modalIsOpen && this.state.activeModal === 'signin' && (
           <div>
@@ -120,14 +123,19 @@ class Header extends Component {
             </Modal>
           </div>
         )}
-      </HeaderDiv>
+      </HeaderWrapper>
     )
   }
 }
 
-const HeaderDiv = styled.div`
-  grid-row: 1;
-  grid-column: 1/5;
+const HeaderWrapper = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/ -1;
+  span {
+    margin-left: auto;
+  }
 `
 export default connect(
   mapStateToProps,

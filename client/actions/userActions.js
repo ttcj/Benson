@@ -1,7 +1,11 @@
 import { SIGNIN_USER, SIGNUP_USER, CONFIRM_USER } from './actionTypes'
 
 export const userSignup = user => async dispatch => {
-  dispatch({ type: SIGNUP_USER, payload: user })
+  try {
+    dispatch({ type: SIGNUP_USER, payload: user })
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const userSignin = user => async dispatch => {
