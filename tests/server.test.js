@@ -15,7 +15,7 @@ describe('Root', () => {
   it('should respond the index.html', async () => {
     const response = await request(app)
       .get('/')
-      .expect(201)
+      .expect(200)
       .expect('Content-Type', 'text/html; charset=UTF-8')
   })
 })
@@ -59,6 +59,6 @@ describe('Signup', () => {
       .send(validSignupData)
       .expect(200)
       .expect('Content-Type', 'text/plain')
-      .expect('missing name')
+      .expect('Content-Length', '16')
   })
 })
