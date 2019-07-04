@@ -9,7 +9,7 @@ const userSchema = new Schema({
     type: Number,
   },
   household_id: {
-    type: Schema.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Household',
   },
 });
@@ -20,7 +20,7 @@ const householdSchema = new Schema({
     ref: 'User',
   }],
   name: String,
-  lists: {
+  topics: {
     bills: { type: Schema.Types.Mixed },
   },
 });
