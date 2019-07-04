@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "npx kill-port 3000 && jest --watch",
+    "server": "NODE_ENV=development nodemon server/server.js",
+    "test": "npx kill-port 3000 && jest --detectOpenHandles",
     "dev": "parcel public/index.html"
   },
   "repository": {
