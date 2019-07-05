@@ -1,4 +1,10 @@
-import { SIGNIN_USER, SIGNUP_USER, CONFIRM_USER } from './actionTypes'
+import {
+  SIGNIN_USER,
+  SIGNUP_USER,
+  CONFIRM_USER,
+  CREATE_BILL,
+  ADD_MEMBER
+} from './actionTypes'
 
 export const userSignup = user => async dispatch => {
   try {
@@ -14,4 +20,12 @@ export const userSignin = user => async dispatch => {
 
 export const confirmUser = confirmationCode => async dispatch => {
   dispatch({ type: CONFIRM_USER, payload: true })
+}
+
+export const createBill = billData => async dispatch => {
+  dispatch({ type: CREATE_BILL, payload: billData })
+}
+
+export const addMember = member => async dispatch => {
+  dispatch({ type: ADD_MEMBER, payload: member })
 }

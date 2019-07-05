@@ -7,7 +7,9 @@ export default function LandingContainer () {
     <AppWrapper>
       <Header className='landingDiv' />
       <article className='article'>Welcome to Benson</article>
-      <figure className='figure'>robot photo</figure>
+      <section className='figure'>
+        <img src='https://res.cloudinary.com/dxrjureso/image/upload/v1562327859/robotImage_k4fg5w.jpg' />
+      </section>
       <footer className='footer'>I am footer</footer>
     </AppWrapper>
   )
